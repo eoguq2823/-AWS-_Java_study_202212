@@ -2,13 +2,17 @@ package J12_배열;
 
 import java.util.Scanner;
 
+import javax.print.attribute.standard.PrinterIsAcceptingJobs;
+
 public class J12_UserService {
 	
-	
 	private Scanner scanner; 
+	private J12_UserRepository userRepository; 
 	
-	public J12_UserService() {
+	public J12_UserService(J12_UserRepository userRepository) {
+		
 		scanner = new Scanner(System.in);
+		this.userRepository = userRepository;
 	}
 	
 	public void run() {
@@ -56,7 +60,59 @@ public class J12_UserService {
 		System.out.println("q. 프로그램 종료");
 		System.out.println();
 	}
+	//회원 전체 조회
+	private void showUsers() { //이거때문에 겟을 만들었다.
+		//유저 배열 가져오기
+		J12_User[] users = userRepository.getUserTable();
 		
+		System.out.println("========<< 회원 전체 조회 >>========");
+		
+		for(J12_User user : users) {
+			System.out.println(user.toString());
+		}
+		System.out.println("====================================");
+		
+	}
+	//회원 등록 
+	private void registerUser() {
+		J12_User user = new J12_User();
+		
+		
+		System.out.println("========<< 회원 등록 >>========");
+		System.out.print("사용자이름: ");
+		user.setUsername(scanner.nextLine());
+		
+		System.out.print("비밀번호: ");
+		user.setPassword(scanner.nextLine());
+		
+		System.out.print("성명: ");
+		user.setName(scanner.nextLine());
+		
+		System.out.print("이메일: ");
+		user.setEmail(scanner.nextLine());
+		
+		System.out.println("===============================");
+		
+		userRepository.saveUser(user);
+	}
+	//사용자 이름으로 회원 조회
+	private void userLookup() {
+		System.out.print("사용자이름: ");
+		String name = scanner.nextLine();
+		System.out.println(userRepository.findUserName(name));
+	}
+	
+	private void userUpdate() {
+		System.out.println("=======<<수정메뉴>>=======");
+		System.out.println("==========================");
+		System.out.println("1. 비밀번호 변경");
+		System.out.println("2. 이름 변경");
+		System.out.println("3. 이메일 변경");
+		System.out.println("==========================");
+		System.out.println("b. 뒤로가기");
+		System.out.println();
+	}
+	
 	private boolean mainMenu(char select) {
 		boolean flag = true;
 		
@@ -65,13 +121,13 @@ public class J12_UserService {
 			
 		}else {
 			if(select == '1') {
-			
+				showUsers();
 			}else if(select == '2') {
-				
+				registerUser();
 			}else if(select == '3') {
-				
+				userLookup();
 			}else if(select == '4') {
-				
+				userUpdate();
 			}else {
 				System.out.println(getSelectedErrorMessage());
 			}

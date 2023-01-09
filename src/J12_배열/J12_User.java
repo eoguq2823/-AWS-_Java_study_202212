@@ -6,6 +6,11 @@ public class J12_User {
 	private String password;    //비밀번호 
 	private String name;		//성명
 	private String email;		//이메일
+	
+	public J12_User() {
+		
+	}
+	
 	public J12_User(String username, String password, String name, String email) {
 		//생성자 alt + shift + s
 		super();
