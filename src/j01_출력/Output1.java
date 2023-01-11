@@ -1,4 +1,4 @@
-package J01_출력;
+package j01_출력;
 
 public class Output1 {
 

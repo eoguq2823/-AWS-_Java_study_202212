@@ -1,4 +1,4 @@
-package J02_변수;
+package j02_변수;
 
 public class Variavble3 {
 

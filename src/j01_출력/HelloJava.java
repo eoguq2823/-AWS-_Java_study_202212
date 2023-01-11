@@ -1,4 +1,4 @@
-package J01_출력;
+package j01_출력;
 
 public class HelloJava { //클래스는 무조건 대문자, 중괄호 = 이 클라스 는 여기다
 	// 주석 : 코드 내부에 메모를 할 때 사용함.

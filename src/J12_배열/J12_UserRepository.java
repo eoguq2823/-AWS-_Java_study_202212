@@ -54,11 +54,10 @@ public class J12_UserRepository {
 			break;
 		}
 	}
-		
 	return user;	
 	}
 	
-
+	
 		
 	
 	
