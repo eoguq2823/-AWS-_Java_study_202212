@@ -1,5 +1,7 @@
 package j01_출력;
 
+import j17_스태틱.싱글톤.KIA;
+
 public class HelloJava { //클래스는 무조건 대문자, 중괄호 = 이 클라스 는 여기다
 	// 주석 : 코드 내부에 메모를 할 때 사용함.
 	// 컴파일 시에 무시됨.
@@ -23,5 +25,9 @@ public class HelloJava { //클래스는 무조건 대문자, 중괄호 = 이 클
 		System.out.println("수업 : AWS기반 공공빅데이터 활용 웹개발자 양성");
 		//println <- ln은 (줄바꿈 한줄의 문자열을 출력후 끝에 줄바꿈을 해라.)
 		//시스템 아웃은 콘솔에 출력
-		}
+		
+		System.out.println();
+		
+		KIA.getInstance().printCompanyName();
+	}
 }

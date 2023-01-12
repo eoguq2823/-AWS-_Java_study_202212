@@ -18,6 +18,8 @@ public class ToString {
 		Student student3= new Student("김두영", 28);
 		Student student4 = new Student("강의진", 29);
 		
+// 		String str = student1; 객체주소이기때문에 String에 대입할 수 없다. 사용X 
+		
 		System.out.println(student1);
 		System.out.println(student2);
 		System.out.println(student3);
