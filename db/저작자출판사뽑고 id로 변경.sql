@@ -63,7 +63,7 @@ from
     
 /*=======저자이름이 김주 일때 어느도서관에있는 어느책인지 뽑아오기=======*/
 
-set profiling = 1;
+set profiling = 1; 
 set profiling_history_size = 30; /* 시간 확인 */ 
 # 서브쿼리 사용
 select
@@ -81,7 +81,7 @@ where
 			   or 	author_name like '%김민%');
 
 
-show profiles; /* 시간 확인*/
+show profiles; /* 시간 확인 기능 실행 */
 # 조인 사용
 select
 	도서관명,
