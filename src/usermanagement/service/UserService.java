@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import usermanagement.entity.User;
+import usermanagement.repository.RoleDtl;
 import usermanagement.repository.UserRepository;
 
 public class UserService {
@@ -32,7 +33,7 @@ public class UserService {
 		gson = new GsonBuilder().setPrettyPrinting().create();
 
 	}
-
+	
 	public Map<String, String> register(String userJson) {
 		//response : 응답
 		Map<String, String> response = new HashMap<>();
@@ -68,7 +69,15 @@ public class UserService {
 		System.out.println("암호화 후");
 		System.out.println(user);
 		
-		userRepository.saveUser(user);
+		userRepository.svaeUser(user);
+		
+		RoleDtl roleDtl = RoleDtl.builder()
+				.roleId(3)
+				.userId(user.getUserId())
+				.build();
+		
+		userRepository.saveRoleDtl(roleDtl); //권한 부여
+	
 		
 		response.put("ok", "회원 가입이 완료되었습니다.");
 		

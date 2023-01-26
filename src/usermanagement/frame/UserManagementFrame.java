@@ -71,7 +71,7 @@ public class UserManagementFrame extends JFrame {
 		mainPanel.setLayout(mainCard);
 		
 		JPanel loginPanel = new JPanel();
-		loginPanel.setBackground(new Color(255, 0, 0));
+		loginPanel.setBackground(new Color(255, 255, 255));
  		
 		mainPanel.add(loginPanel, "loginPanel");
 		loginPanel.setLayout(null);
