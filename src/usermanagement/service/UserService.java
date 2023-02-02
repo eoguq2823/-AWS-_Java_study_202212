@@ -10,8 +10,8 @@ import org.mindrot.jbcrypt.BCrypt;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import usermanagement.entity.RoleDtl;
 import usermanagement.entity.User;
-import usermanagement.repository.RoleDtl;
 import usermanagement.repository.UserRepository;
 
 public class UserService {

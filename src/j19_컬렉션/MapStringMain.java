@@ -26,7 +26,7 @@ public class MapStringMain {
 		//기본 for문으로는 반복돌릴 수 X
 		//keySet()
 		for(String k : strMap.keySet()) {
-			System.out.println("key: " + k);  //키값
+			System.out.println("key:========== " + k);  //키값
 			System.out.println("valuse: " + strMap.get(k)); //밸류
 		}
 		

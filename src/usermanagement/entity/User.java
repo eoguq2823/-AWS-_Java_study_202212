@@ -4,7 +4,6 @@ import java.util.List;
 
 import lombok.Builder;
 import lombok.Data;
-import usermanagement.repository.RoleDtl;
 
 @Builder
 @Data

@@ -1,4 +1,4 @@
-package usermanagement.repository;
+package usermanagement.entity;
 
 import lombok.Builder;
 import lombok.Data;

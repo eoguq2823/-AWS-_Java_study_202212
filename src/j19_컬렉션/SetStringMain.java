@@ -27,7 +27,7 @@ public class SetStringMain {
 		setStr.add("최해혁"); //값이 중복 X 
 		setStr.addAll(listStr); //addAll을 통해 리스트를 다넣을수있다.중복값 사라짐
 		
-		System.out.println(setStr);
+		System.out.println(setStr);                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 		//값을 직접 비교
 		String searchName = "손지호";
 		

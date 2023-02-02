@@ -21,16 +21,16 @@ public class JsonMap {
 		user.put("name", null); 
 		
 		String userJson = gson.toJson(user);
-		System.out.println(user);     // {password=1234, username=aaa}
+//		System.out.println(user);     // {password=1234, username=aaa}
 		System.out.println(userJson); // "password": "1234",
 									  // "username": "aaa"
 		
 		Map<String, Object> userMap = gson.fromJson(userJson, Map.class);
 		User userObj = gson.fromJson(userJson, User.class);
 		
-		System.out.println(userMap);
-		System.out.println(userObj);
-		
+//		System.out.println(userMap);
+//		System.out.println(userObj);
+//		
 		JsonObject jsonObject = new JsonObject();
 		jsonObject.addProperty("test1", "aaa");
 		jsonObject.addProperty("test2", "bbb");

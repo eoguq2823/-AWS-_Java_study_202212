@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import j23_database.DBConnectionMgr;
+import usermanagement.entity.RoleDtl;
+import usermanagement.entity.RoleMst;
 import usermanagement.entity.User;
 
 /* userrepository의 다른말
