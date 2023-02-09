@@ -24,7 +24,7 @@ public class UserManagementServerApplication implements Runnable{
 		} finally {
 			try {
 				if(serverSocket != null) {
-				serverSocket.close();
+					serverSocket.close();
 				}
 				System.out.println("==========<< 서버 종료 >>==========");
 			} catch (IOException e) {
