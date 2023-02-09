@@ -139,4 +139,4 @@ public class Lambda2 {
 			.collect(Collectors.toList())
 			.forEach(System.out::println); //(name -> sysout(name)); 이랑 같음
 	}
-}
+} 
