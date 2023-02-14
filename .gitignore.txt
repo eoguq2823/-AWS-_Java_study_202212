@@ -1,15 +1,3 @@
-# Compiled class file
-*.class
-
-# [IDE] Eclipse STS4, Intellij
-.settings
-bin
-target
-
- .classpath
-.factorypath
- .project
-
 .idea
 
 # Log file
